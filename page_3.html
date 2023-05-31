@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecomixture三维数字孪生平台</title>
+    <link rel="stylesheet" href="css/new_page3.css">
+</head>
+<body>
+    <header>
+        <!--头部标题-->
+        <h1>Ecomixture三维数字孪生平台</h1>
+
+        <!--头部左侧二级标题-->
+        <h2>⩥ 楼层管理</h2>
+
+        <!--获取年月日-->
+        <div class="showTime1"></div>
+        <script>
+            var t1 = null;
+            t1 = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t1);
+                dt1 = new Date();
+                var y = dt1.getFullYear();
+                var mt = dt1.getMonth() + 1;
+                var day = dt1.getDate();
+                document.querySelector(".showTime1").innerHTML = y + '/' + mt + '/' + day;
+                t1 = setTimeout(time, 1000); 
+            }
+        </script>
+        <!--获取星期-->
+        <div class="showTime2"></div>
+        <script>
+            var t2 = null;
+            t2 = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t2);
+                dt2 = new Date();
+                var week = [
+                    "星期天",
+                    "星期一",
+                    "星期二",
+                    "星期三",
+                    "星期四",
+                    "星期五",
+                    "星期六",
+                    ][dt2.getDay()]; 
+                document.querySelector(".showTime2").innerHTML = week;
+                t2 = setTimeout(time, 1000); 
+            }
+        </script>
+        <!--获取时分秒-->
+        <div class="showTime3"></div>
+        <script>
+            var t3 = null;
+            t3 = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t3); 
+                dt3 = new Date();
+                var h = dt3.getHours();
+                var m = dt3.getMinutes();  
+                var s = dt3.getSeconds();  
+                document.querySelector(".showTime3").innerHTML = h + ':' + m + ':' + s;
+                t3 = setTimeout(time, 1000); 
+            }
+        </script>
+
+        <!--页面主体部分-->
+        <section class="mainbox">
+            <div class="column_top">
+                <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp楼层基本信息</div>
+                <div class="overview">
+                    <div class="whole-view">
+                        &nbsp&nbsp占地面积
+                        <div class="whole-view-unit">&nbsp&nbsp&nbsp&nbsp[单位：m²]</div>
+                        <div class="everyview1">&nbsp142W</div>
+                    </div>
+                    <div class="whole-view">
+                        &nbsp&nbsp企业总数
+                        <div class="whole-view-unit">&nbsp&nbsp&nbsp&nbsp[单位：家]</div>
+                        <div class="everyview2">&nbsp37</div>
+                    </div>
+                    <div class="whole-view">
+                        &nbsp&nbsp人员总数
+                        <div class="whole-view-unit">&nbsp&nbsp&nbsp&nbsp[单位：人]</div>
+                        <div class="everyview3">&nbsp526</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column_top">
+                <div class="catalog">
+                    <h3><a href="page_1.html">综合态势</a></h3>
+                    <h4><a href="page_2.html">机房管理</a></h4>
+                    <h5><a href="page_3.html" style="color: rgba(210, 112, 21, 0.9)">楼层管理</a></h5>
+                </div>
+                <div class="screen"></div>
+            </div>
+            <div class="column_top firms_number">
+                <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp入驻企业情况</div>
+                <div class="num_one">
+                    <article class="num_table">
+                        <section>
+                            <ul>
+                                <li><b>企业名称</b></li>
+                                <li><b>入住时长</b></li>
+                                <li><b>负责人</b></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>...</li>
+                                <li>...</li>
+                                <li>...</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>A公司</li>
+                                <li>2个月</li>
+                                <li>张三</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>B公司</li>
+                                <li>7个月</li>
+                                <li>李四</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>C公司</li>
+                                <li>3个月</li>
+                                <li>王五</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>D公司</li>
+                                <li>1个月</li>
+                                <li>赵六</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>E公司</li>
+                                <li>5个月</li>
+                                <li>孙七</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>F公司</li>
+                                <li>3个月</li>
+                                <li>周八</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <ul>
+                                <li>G公司</li>
+                                <li>6个月</li>
+                                <li>吴九</li>
+                            </ul>
+                        </section>
+                    </article>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="num_two">
+                    <div class="firms"></div>
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="mid_title">
+        <div class="column_mid_title">
+            <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp楼层运维信息</div>
+        </div>
+        <div class="column_mid_title">
+            <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp工作人员信息</div>
+        </div>
+    </section>
+    <section class="mid_title_line">
+        <div class="column_mid_title_line"></div>
+        <div class="column_mid_title_line"></div>
+    </section>
+    <section class="bottombox">
+        <div class="column_bottom_content type">
+            <div class="chart"></div>
+        </div>
+        <div class="column_bottom_content change">
+            <div class="chart"></div>
+        </div>
+        <div class="column_bottom_content report">
+            <div class="chart"></div>
+        </div>
+        <div class="column_bottom_content come_from">
+            <div class="chart"></div>
+        </div>
+    </section>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/new_page3.js"></script>
+</body>
+</html>

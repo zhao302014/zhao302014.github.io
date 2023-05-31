@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecomixture三维数字孪生平台</title>
+    <link rel="stylesheet" href="css/new_page2.css">
+</head>
+<body>
+    <header>
+        <!--头部标题-->
+        <h1>Ecomixture三维数字孪生平台</h1>
+
+        <!--头部左侧二级标题-->
+        <h2>⩥ 机房管理</h2>
+
+        <!--获取年月日-->
+        <div class="showTime1"></div>
+        <script>
+            var t1 = null;
+            t1 = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t1);
+                dt1 = new Date();
+                var y = dt1.getFullYear();
+                var mt = dt1.getMonth() + 1;
+                var day = dt1.getDate();
+                document.querySelector(".showTime1").innerHTML = y + '/' + mt + '/' + day;
+                t1 = setTimeout(time, 1000); 
+            }
+        </script>
+        <!--获取星期-->
+        <div class="showTime2"></div>
+        <script>
+            var t2 = null;
+            t2 = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t2);
+                dt2 = new Date();
+                var week = [
+                    "星期天",
+                    "星期一",
+                    "星期二",
+                    "星期三",
+                    "星期四",
+                    "星期五",
+                    "星期六",
+                    ][dt2.getDay()]; 
+                document.querySelector(".showTime2").innerHTML = week;
+                t2 = setTimeout(time, 1000); 
+            }
+        </script>
+        <!--获取时分秒-->
+        <div class="showTime3"></div>
+        <script>
+            var t3 = null;
+            t3 = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t3); 
+                dt3 = new Date();
+                var h = dt3.getHours();
+                var m = dt3.getMinutes();  
+                var s = dt3.getSeconds();  
+                document.querySelector(".showTime3").innerHTML = h + ':' + m + ':' + s;
+                t3 = setTimeout(time, 1000); 
+            }
+        </script>
+
+        <!--页面主体部分-->
+        <section class="mainbox">
+            <div class="column_top">
+                <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp设备概览</div>
+                <div class="overview">
+                    <div class="whole-view">
+                        &nbsp&nbsp在线设备
+                        <div class="whole-view-unit">&nbsp&nbsp&nbsp&nbsp[单位：台]</div>
+                        <div class="everyview1">&nbsp952</div>
+                    </div>
+                    <div class="whole-view">
+                        &nbsp&nbsp进出车辆
+                        <div class="whole-view-unit">&nbsp&nbsp&nbsp&nbsp[单位：辆]</div>
+                        <div class="everyview2">&nbsp489</div>
+                    </div>
+                    <div class="whole-view">
+                        &nbsp&nbsp进出人员
+                        <div class="whole-view-unit">&nbsp&nbsp&nbsp&nbsp[单位：人]</div>
+                        <div class="everyview3">&nbsp1,398</div>
+                    </div>
+                    <div class="whole-view">
+                        &nbsp&nbsp当日能耗
+                        <div class="whole-view-unit_4">&nbsp&nbsp&nbsp&nbsp[单位：kgce/t]</div>
+                        <div class="everyview4">&nbsp2,057</div>
+                    </div>
+                </div>
+            </div>
+            <div class="column_top">
+                <div class="catalog">
+                    <h3><a href="page_1.html">综合态势</a></h3>
+                    <h4><a href="page_2.html" style="color: rgba(210, 112, 21, 0.9)">机房管理</a></h4>
+                    <h5><a href="page_3.html">楼层管理</a></h5>
+                </div>
+                <div class="screen"></div>
+            </div>
+            <div class="column_top weight">
+                <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp院区客流负荷监控</div>
+                <div class="load one">
+                    <div class="detail_one"></div>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="load two">
+                    <div class="detail_two"></div>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="load three">
+                    <div class="detail_three"></div>
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="mid_title">
+        <div class="column_mid_title">
+            <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp周边报警分析</div>
+        </div>
+        <div class="column_mid_title">
+            <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAI报警事件列表</div>
+        </div>
+    </section>
+    <section class="mid_title_line">
+        <div class="column_mid_title_line"></div>
+        <div class="column_mid_title_line"></div>
+    </section>
+    <section class="bottombox">
+        <div class="column_bottom_content deal">
+            <div class="chart"></div>
+        </div>
+        <div class="column_bottom_content type">
+            <div class="chart"></div>
+        </div>
+        <div class="column_bottom_content degree">
+            <div class="chart"></div>
+        </div>
+        <div class="column_bottom_content event">
+            <article class="table">
+                <section>
+                    <ul>
+                        <li><b>报警时间</b></li>
+                        <li><b>处理单位</b></li>
+                        <li><b>事件类别</b></li>
+                        <li><b>处理状态</b></li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>2023/05/29      09：00 </li>
+                        <li>运维中心             </li>
+                        <li>一般报警             </li>
+                        <li>处理中               </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>2023/06/03      14：00 </li>
+                        <li>网管中心             </li>
+                        <li>一般报警             </li>
+                        <li>处理完               </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>2023/06/02      13：00 </li>
+                        <li>运维中心             </li>
+                        <li>一般报警             </li>
+                        <li>处理中               </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>2023/06/01      12：00 </li>
+                        <li>网管中心             </li>
+                        <li>严重报警             </li>
+                        <li>处理中               </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>2023/05/31      11：00 </li>
+                        <li>运维中心             </li>
+                        <li>一般报警             </li>
+                        <li>处理完               </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>2023/05/30   10：00 </li>
+                        <li>运维中心             </li>
+                        <li>一般报警             </li>
+                        <li>处理中               </li>
+                    </ul>
+                </section>
+            </article>
+            <!-- <div class="chart"></div> -->
+        </div>
+    </section>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/new_page2.js"></script>
+</body>
+</html>
