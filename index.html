@@ -1,9 +1,170 @@
 <!DOCTYPE html>
-<HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecomixture三维数字孪生平台</title>
+    <link rel="stylesheet" href="css/new_page1.css">
+</head>
+<body>
+    <header>
+        <!--头部标题-->
+        <h1>Ecomixture三维数字孪生平台</h1>
 
-<BODY>
+        <!--头部左侧二级标题-->
+        <h2>⩥ 综合态势</h2>
 
-<H1>网站维护中……</H1>
+        <!--获取年月日-->
+        <div class="showTime1"></div>
+        <script>
+            var t1 = null;
+            t1 = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t1);
+                dt1 = new Date();
+                var y = dt1.getFullYear();
+                var mt = dt1.getMonth() + 1;
+                var day = dt1.getDate();
+                document.querySelector(".showTime1").innerHTML = y + '/' + mt + '/' + day;
+                t1 = setTimeout(time, 1000); 
+            }
+        </script>
+        <!--获取星期-->
+        <div class="showTime2"></div>
+        <script>
+            var t2 = null;
+            t2 = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t2);
+                dt2 = new Date();
+                var week = [
+                    "星期天",
+                    "星期一",
+                    "星期二",
+                    "星期三",
+                    "星期四",
+                    "星期五",
+                    "星期六",
+                    ][dt2.getDay()]; 
+                document.querySelector(".showTime2").innerHTML = week;
+                t2 = setTimeout(time, 1000); 
+            }
+        </script>
+        <!--获取时分秒-->
+        <div class="showTime3"></div>
+        <script>
+            var t3 = null;
+            t3 = setTimeout(time, 1000); 
+            function time() {
+                clearTimeout(t3); 
+                dt3 = new Date();
+                var h = dt3.getHours();
+                var m = dt3.getMinutes();  
+                var s = dt3.getSeconds();  
+                document.querySelector(".showTime3").innerHTML = h + ':' + m + ':' + s;
+                t3 = setTimeout(time, 1000); 
+            }
+        </script>
 
-</BODY></HTML>
-
+        <!--页面主体部分-->
+        <section class="mainbox">
+            <div class="column_top">
+                <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp院区概览</div>
+                <div class="overview">
+                    <div class="whole-view">
+                        &nbsp&nbsp运行时长
+                        <div class="whole-view-unit">&nbsp&nbsp&nbsp&nbsp[单位：天]</div>
+                        <div class="everyview1">&nbsp808</div>
+                    </div>
+                    <div class="whole-view">
+                        &nbsp&nbsp剩余车位数
+                        <div class="whole-view-unit">&nbsp&nbsp&nbsp&nbsp[单位：辆]</div>
+                        <div class="everyview2">&nbsp&nbsp&nbsp0</div>
+                    </div>
+                    <div class="whole-view">
+                        &nbsp&nbsp来访人数
+                        <div class="whole-view-unit">&nbsp&nbsp&nbsp&nbsp[单位：人]</div>
+                        <div class="everyview3">&nbsp229</div>
+                    </div>
+                </div>
+            </div>
+            <div class="column_top">
+                <div class="catalog">
+                    <h3><a href="page_1.html" style="color: rgba(210, 112, 21, 0.9)">综合态势</a></h3>
+                    <h4><a href="page_2.html">机房管理</a></h4>
+                    <h5><a href="page_3.html">楼层管理</a></h5>
+                </div>
+                <div class="screen"></div>
+            </div>
+            <div class="column_top">
+                <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp安防监控视频轮播</div>
+                <div class="camera one">
+                    <video class="camera_scene" src="images/video1.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="camera two">
+                    <video class="camera_scene" src="images/video2.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
+                    <div class="panel-footer"></div>
+                </div>
+                <div class="camera three">
+                    <video class="camera_scene" src="images/video3.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="mid_title">
+        <div class="column_mid_title">
+            <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp态势分析</div>
+        </div>
+        <div class="column_mid_title">
+            <div class="title">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp能源分析</div>
+        </div>
+    </section>
+    <section class="mid_title_line">
+        <div class="column_mid_title_line"></div>
+        <div class="column_mid_title_line"></div>
+    </section>
+    <section class="bottombox">
+        <div class="column_bottom_content number">
+            <h2>上月报告数量</h2>
+            <div class="column_bottom_content_everyview1">106</div>
+            <div class="column_bottom_content_everyview2">&nbsp[单位：件]</div>
+            <div class="column_bottom_content_everyview3">
+                <div class="column_bottom_content_everyview3_panel_footer"></div>
+            </div>
+            <div class="column_bottom_content_everyview3">
+                <div class="column_bottom_content_everyview3_panel_footer"></div>
+            </div>
+            <div class="column_bottom_content_everyview4">
+                同比：
+            </div>
+            <div class="column_bottom_content_everyview5">
+                环比：
+            </div>
+            <div class="column_bottom_content_everyview6">
+                -5.09 ⬇
+            </div>
+            <div class="column_bottom_content_everyview7">
+                -2.16 ⬇
+            </div>
+        </div>
+        <div class="column_bottom_content trend">
+            <div class="chart"></div>
+        </div>
+        <div class="column_bottom_content consume">
+            <div class="chart"></div>
+        </div>
+        <div class="column_bottom_content use_water">
+            <div class="chart"></div>
+        </div>
+        <div class="column_bottom_content use_electricity">
+            <div class="chart"></div>
+        </div>
+    </section>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/new_page1.js"></script>
+</body>
+</html>
